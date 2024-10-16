@@ -64,14 +64,14 @@ always @ (posedge (clock))
                q <= q;
                qb <=qb;
             end   
-        else
-    begin
-        if (j == 0 && k == 0)
+    else
+       begin
+           if (j == 0 && k == 0)
 		  begin
 		  q <= q;
-        qb <= qb;
-        end 
-		else if (j != k)
+          qb <= qb;
+          end 
+		 else if (j != k)
 		  begin
 		  q <= j;
 	          qb <= k;
@@ -80,10 +80,10 @@ always @ (posedge (clock))
 		begin
                 q <= ~q;
                 qb <= ~qb;
-          	end   
-	     end
-           end
-        endmodule
+            	end   
+	  end
+        end
+    endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
 
