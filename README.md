@@ -61,8 +61,7 @@ always @ (posedge (clock))
                q <= q;
                qb <=qb;
             end   
-        
-else
+        else
     begin
         if (j == 0 && k == 0)
 		  begin
@@ -81,7 +80,7 @@ else
             	end   
 	end
      end
-endmodule
+    endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
 
