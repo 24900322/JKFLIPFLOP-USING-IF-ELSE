@@ -93,5 +93,6 @@ always @ (posedge (clock))
 
 ![ex7 time](https://github.com/user-attachments/assets/8641728f-8edd-4061-8b38-0052b4ba818c)
 
-**RESULTS**
-              To implement JK flipflop using verilog and validating their functionality using their functional tables has been successfully compeleted.
+**RESULTS**:
+
+To implement JK flipflop using verilog and validating their functionality using their functional tables has been successfully compeleted.
