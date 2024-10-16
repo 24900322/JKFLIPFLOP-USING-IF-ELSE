@@ -82,7 +82,7 @@ always @ (posedge (clock))
                 qb <= ~qb;
             	end   
 	               end
-     end
+               end
             endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
