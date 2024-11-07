@@ -51,6 +51,7 @@ Developed by: VIJJAY M
 RegisterNumber: 24900322
 
 */
+
 module JK_FF(q,qb,j,k,clock);
 input j,k,clock;
 output reg q;
