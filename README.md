@@ -51,47 +51,27 @@ Developed by: VIJJAY M
 RegisterNumber: 24900322
 
 */
+module JK_FF(q,qb,j,k,clock);
+input j,k,clock;
+output reg q;
+output qb;
 
-module JKflipflop(q, qb,j,k,clock,reset);
-    input j,k,clock,reset;
-    output reg q, qb;
-	 
-always @ (posedge (clock))
-
-    begin 
-        if (!reset)
-            begin
-               q <= q;
-               qb <=qb;
-            end   
-    else
-       begin
-           if (j == 0 && k == 0)
-		  begin
-		  q <= q;
-          qb <= qb;
-          end 
-		 else if (j != k)
-		  begin
-		  q <= j;
-	          qb <= k;
-	          end 
-		else if (j == 1 && k == 1)
-		begin
-                q <= ~q;
-                qb <= ~qb;
-            	end   
-	  end
-        end
-    endmodule
+always @(posedge(clock))
+begin
+	q <= (j&(~q))+ ((~k)&q);
+end
+assign qb = (~q);
+endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
 
-![ex7 rtl](https://github.com/user-attachments/assets/117f5ecc-0b3e-4e24-91b3-e285eaa51630)
+![JK RTL 7](https://github.com/user-attachments/assets/14416704-479b-4f00-8c9c-6d80a1cc0cbd)
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![ex7 time](https://github.com/user-attachments/assets/8641728f-8edd-4061-8b38-0052b4ba818c)
+![JK WAVE 7](https://github.com/user-attachments/assets/304e34b8-6dd4-4208-b5fb-0c95103e610f)
+
 
 **RESULTS**:
 
